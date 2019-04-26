@@ -1,5 +1,6 @@
 Vue.component('education', {
-   template: `<section id="section5">
+   props: ['language', 'lang', ],
+   template: `<section id="education">
    <div class="container">
       <h2>Educational Value</h2>
       <div class="education clearfix">

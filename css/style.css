@@ -165,6 +165,9 @@ h3.small-margin-bottom {
 	color: #4169e1;
 	font-size: 50px;
 }
+.capitalise {
+	text-transform: capitalize!important;
+}
 
 /* ==========================================================================
    02. Buttons
@@ -216,7 +219,7 @@ h3.small-margin-bottom {
 	text-align: center;
 }
 .solid-button:hover {
-	box-shadow: 0 3px 6px rgba(0,0,0,.3);
+	box-shadow: 0 4px 7px rgb(147, 147, 210);
 }
 .solid-button.royal-blue {
 	background: #4169e1;
@@ -255,7 +258,7 @@ h3.small-margin-bottom {
 }
 /*==========  Action Button  ==========*/
 .action-button {
-	background: #363c3e;
+	background: #4169e1;
 	color: #fff;
 	font-size: 24px;
 	width: 60px;
@@ -267,7 +270,7 @@ h3.small-margin-bottom {
 	box-shadow: 0 4px 12px rgba(0,0,0,.13), 0 6px 10px rgba(0,0,0,.3);
 }
 .action-button:hover {
-	box-shadow: 0 6px 18px rgba(0,0,0,.13), 0 9px 15px rgba(0,0,0,.3);
+	box-shadow: 0 6px 18px rgb(147, 147, 210), 0 9px 15px rgb(147, 147, 210);
 }
 .button-nav {
 	background: white;

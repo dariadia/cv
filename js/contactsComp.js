@@ -1,6 +1,7 @@
 Vue.component('contacts', {
+   props: ['language', 'lang', ],
    template: `
-   <section id="section7">
+   <section id="contacts">
       <div class="container">
          <h2>Get In Touch With Me</h2>
          <div class="row">
@@ -66,4 +67,21 @@ Vue.component('contacts', {
          <div class="map" id="map"></div>
       </div>  
    </section>`
+});
+
+Vue.component('social-links', {
+   props: ['language', 'lang', ],
+   data(){
+      return  {
+                  links: [
+                     {name: 'Github', link: 'https://github.com/dariadia'},
+                     {name: 'Geekbrains', link: 'https://geekbrains.ru/users/3413593'},
+                     {name: 'Linkedin', link: 'https://www.linkedin.com/in/daria-diachkova-157715157/'},
+                     {name: 'Вконтакте', link: 'https://vk.com/dariadia'},
+                  ],
+              }
+   },
+   template: `<ul class="list-unstyled">
+                  <li v-for="item in links" :key="item.name"><a :href="item.link" class="capitalise">{{ item.name }}</a></li>
+               </ul>`
 });

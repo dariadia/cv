@@ -1,5 +1,6 @@
 Vue.component('about', {
-   template: `<section id="section2">
+   props: ['language', 'lang', ],
+   template: `<section id="about">
    <div class="container">
       <h2>About Me</h2>
       <div class="row">

@@ -1,5 +1,6 @@
 Vue.component('skills', {
-   template: `<section id="section3">
+   props: ['language', 'lang', ],
+   template: `<section id="skills">
    <div class="container">
       <h2>My Skills Values</h2>
       <div class="row">

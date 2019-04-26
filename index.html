@@ -10,8 +10,6 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Font Awesome Icons -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-		<!-- Material Design Icons -->
-		<link href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet">
 		<!-- Font Awesome -->
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 		<!-- Vue development version, includes helpful console warnings -->
@@ -21,13 +19,16 @@
 		<link href="css/owl.theme.default.css" rel="stylesheet">
 		<!-- Style.css -->
 		<link href="css/style.css" rel="stylesheet">
+		<!-- Vue scroll -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 
 	</head>
 	<body><div id="cv">
 		<!-- Search overlay -->
 		<div class="search-overlay"></div>
 		<div class="search">
-			<a href="" class="search-close"><i class="md md-close"></i></a>
+			<a href="" class="search-close"><i class="fas fa-times"></i></a>
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">
 					<h4>{{ language[lang].search }}</h4>
@@ -42,18 +43,13 @@
 		<div class="slide-out">
 			<header class="slide-out-header clearfix">
 				<div class="clearfix">
-					<a href="" class="slide-out-close pull-left"><i class="md md-close"></i></a>
-					<a href="" class="open-search pull-right"><i class="md md-search"></i></a>
-					<a href="" class="slide-out-share pull-right"><i class="md md-more-vert"></i></a>
+					<a href="" class="slide-out-close pull-left"><i class="fas fa-times"></i></a>
+					<a href="" class="open-search pull-right"><i class="fas fa-search"></i></a>
+					<a href="" class="slide-out-share pull-right"><i class="fas fa-user-circle"></i></a>
 				</div> 
 				<div class="slide-out-popup">
 					<nav class="social-nav">
-						<ul class="list-unstyled">
-							<li><a href="#">Github</a></li>
-							<li><a href="#">Linkedin</a></li>
-							<li><a href="#">Вконтакте</a></li>
-							<li><a href="#">Facebook</a></li>
-						</ul> 
+						<social-links></social-links>
 					</nav> 
 				</div> 
 				<div class="image"><img src="images/head01.png" alt="daria's photo" class="img-responsive"></div>
@@ -62,67 +58,62 @@
 					<span>Front-end Developer</span>
 				</div> 
 				<div class="text-right">
-					<a href="" class="button link-button white icon-left"><i class="fas fa-download"></i>{{language[lang].download}} .doc</a>
+					<a href="" class="button link-button white icon-left"><i class="fas fa-download"></i>{{language[lang].download}} (.doc) </a>
 				</div> 
 			</header> 
 			<div class="slide-out-widgets">
 				<div class="slide-out-widget">
-					<h5>{{language[lang].tel}}: +7 (917) 168 1854</h5>
-					<h5><i class="ion-ios-email-outline"></i>Email: <a href="mailto:dariadiachkova@mail.ru">dariadiachkova@mail.ru</a></h5>
+					<h5>{{language[lang].tel}}: {{tel}}</h5>
+					<h5><i class="ion-ios-email-outline"></i>Email: <a href="mailto:dariadiachkova@mail.ru">{{email}}</a></h5>
 				</div> 
 			</div> 
 		</div> <!-- end .slide-out -->
 
 		<header class="header">
 			<div class="top clearfix">
-				<a href="#section7" class="available"><i class="ion-ios-email-outline"></i><span class="span-contact">{{language[lang].contact}}</span></a><button class="button solid-button white" @click="toggleLanguage()">{{language[lang].language}}</button>
+				<a href="#contacts" class="available"><i class="ion-ios-email-outline"></i><span class="span-contact">{{language[lang].contact}}</span></a><button class="button solid-button royal-blue " @click="toggleLanguage()">{{language[lang].language}}</button>
 				<div class="right-icons">
-					<a href="" class="open-search header-open-search"><i class="md md-search"></i></a>
+					<a href="" class="open-search header-open-search"><i class="fas fa-search"></i></a>
 					<a href="" class="download"><i class="fas fa-download"></i></a>
-					<a href="" class="share"><i class="md md-more-vert"></i></a>
-				</div> <!-- end .right-icons -->
+					<a href="" class="share"><i class="fas fa-user-circle"></i></a>
+				</div> 
 				<!-- Popup -->
 				<div class="popup">
 					<nav class="social-nav">
-						<ul class="list-unstyled">
-								<li><a href="#">Github</a></li>
-								<li><a href="#">Linkedin</a></li>
-								<li><a href="#">Вконтакте</a></li>
-								<li><a href="#">Facebook</a></li>
-						</ul> <!-- end .list-unstyled -->
-					</nav> <!-- end .social-nav -->
-				</div> <!-- end .popup -->
+						<social-links></social-links> 
+					</nav> 
+				</div> 
 			</div> <!-- end .top -->
 			<div class="bottom clearfix">
-				<div class="title"><a href="index.html">Sility</a></div>
+				<div class="title"><a href="index.html">{{ language[lang].cv }}</a></div>
 				<div class="header-action-button-wrapper">
-					<a href="" class="header-action-button action-button"><i class="md md-add"></i></a>
-				</div> <!-- end .header-action-button-wrapper -->
-				<a href="" class="responsive-menu-open">Menu <i class="fa fa-bars"></i></a>
+					<a href="" class="header-action-button action-button"><i class="fas fa-plus"></i></a>
+				</div>
+				<a href="" class="responsive-menu-open">Menu<i class="fa fa-bars"></i></a>
 				<nav class="main-nav">
 						<ul class="list-unstyled">
-							<li v-for="section in sections" :key="section" @click="currentSection = section" :class="{active: currentSection == section}"><a href="#">{{getSectionName(section)}}</a></li>
+							<li v-for="section in sections" :key="section" @click="currentSection = section" :class="{active: currentSection == section}" v-scroll-to="'section'"><a href="#">{{getSectionName(section)}}</a></li>
 						</ul>
-			
 				</nav> <!-- end .main-nav -->
-			</div> <!-- end .bottom -->
-		</header> <!-- end .header -->
+			</div> 
+		</header> 
 		<div class="responsive-menu">
 			<a href="" class="responsive-menu-close">{{language[lang].close}} <i class="ion-android-close"></i></a>
-			<nav class="responsive-nav"></nav> <!-- end .responsive-nav -->
-		</div> <!-- end .responsive-menu -->
+			<nav class="responsive-nav"></nav> 
+		</div> 
 
 		<!-- Section Navigation -->
 		<div class="section-nav">
 			<nav class="section1">
-				<i class="fas fa-chevron fa-chevron-circle-left"></i><i class="fas fa-chevron fa-chevron-circle-right"></i>
+				<i @click="previousSection()" class="fas fa-chevron fa-chevron-circle-left"></i>
+				<i @click="nextSection()" class="fas fa-chevron fa-chevron-circle-right"></i>
 			</nav>
 		</div> <!-- end .section-nav -->
 
 		<!-- Sections -->
 		<div class="sections">
 			<div class="sections-wrapper clearfix">
-			<component :is="createComp"></component>
+			<component :is="createComp" :language="language" :lang="lang"></component>
 			
 
 			</div> <!-- end .sections-wrapper -->
@@ -148,13 +139,13 @@
 							</div> <!-- end .social-icons -->
 						</div> <!-- end .col-sm-4 -->
 						<div class="col-sm-4">
-							<h4>Contact</h4>
-							<p>Tel: +61 123-456-7890<br />Mail: Sility@example.com</p>
+							<h4>{{language[lang].contacts}}</h4>
+							<p>{{ language[lang].tel }}: {{tel}} <br />E-mail: {{email}}</p>
 						</div> <!-- end .col-sm-4 -->
 					</div> <!-- end .row -->
 				</div> <!-- end .container -->
 			</div> <!-- end .footer -->
-			<div class="bottom">Copyright &copy; Sility. All Rights Reserved.</div> <!-- end .bottom -->
+			<div class="bottom"> &copy; 2019</div> <!-- end .bottom -->
 		</footer> <!-- end .footer -->
 	</div> <!-- end .cv (main vue app) -->
 
@@ -165,12 +156,12 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Inview -->
 		<script src="js/jquery.inview.min.js"></script>
-		<!-- SmoothScroll -->
-		<script src="js/smoothscroll.js"></script>
 		<!-- jQuery Knob -->
 		<script src="js/jquery.knob.min.js"></script>
 		<!-- Owl Carousel -->
 		<script src="js/owl.carousel.min.js"></script>
+		<!-- SmoothScroll -->
+		<script src="js/smoothscroll.js"></script>
 		<!-- Isotope -->
 		<script src="js/isotope.pkgd.min.js"></script>
 		<!-- Images Loaded -->

@@ -1,5 +1,6 @@
 Vue.component('portfolio', {
-   template: `	<section id="section6">
+   props: ['language', 'lang', ],
+   template: `	<section id="portfolio">
    <div class="container">
       <h2>Portfolio</h2>
       <div class="portfolio-wrapper">
