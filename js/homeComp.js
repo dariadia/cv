@@ -1,17 +1,19 @@
 Vue.component('home', {
-	props: ['language', 'lang', ],
+	props: ['language', 'lang'],
    template: `
    <section id="home" class="no-padding-bottom active">
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-7 vertical-center padding-fix">
-								<h1>Design<sup>+</sup> Develope<sup>+</sup> Interactive<sup>+</sup> Art<sup>+</sup></h1>
-								<p>Hello, I’m Benjamin Thomson. I Have 8 years of experience in Web and UX design. I am worked on a variety of brands and with agencies both big and small.</p>
-								<p class="button-row"><a href="" class="button solid-button white">Hire Me Now</a><a href="" class="button solid-button royal-blue">{{language[lang].download}}</a></p>
+								<h1>Frontend</h1> 
+								<h1>{{ language[lang].developer }} <sup>+</sup></h1>
+								<p class="info">{{ language[lang].homeText }}</p>
+								<br>
+								<h4 class="button solid-button royal-blue" >{{ language[lang].welcome }}</h4>
 							</div>
 							<div class="col-sm-5 vertical-center">
-								<img src="images/man01.png" alt="man" class="img-responsive section-img">
-							</div>
+								<img src="images/me01.png" alt="daria's photo" class="img-responsive section-img">
+							</div><br><br><br>
 						</div> 
 					</div> 
 				</section> 

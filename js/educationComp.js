@@ -2,7 +2,7 @@ Vue.component('education', {
    props: ['language', 'lang', ],
    template: `<section id="education">
    <div class="container">
-      <h2>Educational Value</h2>
+      <h2>{{language[lang].education}}</h2>
       <div class="education clearfix">
          <div class="item">
             <div class="marker"></div>
@@ -12,14 +12,7 @@ Vue.component('education', {
             </div>
             <div class="year">2005 - 2006</div>
          </div>  
-         <div class="item">
-            <div class="marker"></div>
-            <div class="content">
-               <span>University Of Design</span>
-               <h4>Master Degree of Design</h4>
-            </div>
-            <div class="year">2005 - 2006</div>
-         </div>  
+          
          <div class="item">
             <div class="marker"></div>
             <div class="content">
@@ -39,7 +32,7 @@ Vue.component('education', {
          <div class="line"></div>
       </div>  
 
-      <h2>Hobbies & Interest</h2>
+      <h2>{{language[lang].hobbies}}</h2>
       <div class="row">
          <div class="col-sm-2 col-sm-offset-1 col-xs-6">
             <div class="icon-box">

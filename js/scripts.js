@@ -104,37 +104,6 @@
 			$('.slide-out').removeClass('open');
 		});
 
-		/*==========  Search  ==========*/
-		function positionSearch() {
-			if ($(window).width() > $(window).height()) {
-				let windowWidth = $(window).width();
-				$('.search-overlay').css({'width': windowWidth*2.5, 'height': windowWidth*2.5});
-			} else {
-				let windowHeight = $(window).height();
-				$('.search-overlay').css({'width': windowHeight*2.5, 'height': windowHeight*2.5});
-			}
-			let position = $('.header-open-search').offset();
-			let height = $('.header-open-search').height();
-			let width = $('.header-open-search').width();
-			let top = position.top + height/2 - $('.search-overlay').outerHeight()/2;
-			let left = position.left - width/2 - $('.search-overlay').outerWidth()/2;
-			$('.search-overlay').css({'top': top, 'left': left});
-		}
-		positionSearch();
-		$(window).on('resize', function() {
-			positionSearch();
-		});
-		$('.open-search').on('click', function(event) {
-			event.preventDefault();
-			$('.search-overlay').addClass('scale');
-			$('.search').addClass('open');
-		});
-		$('.search-close').on('click', function(event) {
-			event.preventDefault();
-			$('.search-overlay').removeClass('scale');
-			$('.search').removeClass('open');
-		});
-
 		/*==========  Portfolio  ==========*/
 		let $portfolioContainer = $('#portfolio').imagesLoaded(function() {
 			$portfolioContainer.isotope({

@@ -2,15 +2,9 @@ Vue.component('portfolio', {
    props: ['language', 'lang', ],
    template: `	<section id="portfolio">
    <div class="container">
-      <h2>Portfolio</h2>
+      <h2>{{language[lang].portfolio}}</h2>
       <div class="portfolio-wrapper">
-         <div id="portfolio-filters" class="portfolio-filters">
-            <button class="button solid-button white-iron small" data-filter="*">Show All</button>
-            <button class="button solid-button white-iron small" data-filter=".branding">Branding</button>
-            <button class="button solid-button white-iron small" data-filter=".print">Print</button>
-            <button class="button solid-button white-iron small" data-filter=".motion">Motion</button>
-            <button class="button solid-button white-iron small" data-filter=".websites">Websites</button>
-         </div>
+         
          <div id="portfolio" class="portfolio">
             <div class="item branding print">
                <img src="images/portfolio01.jpg" alt="alt text" class="img-responsive">
