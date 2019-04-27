@@ -31,7 +31,7 @@ Vue.component('skills', {
                   <i class="fas fa-atlas royal-blue-font spacer-right"></i> 
                      {{ skill.name }} 
                   <span class="royal-blue-hov spacer-left spacer-right"> 
-                     <span v-if="skill.level === 'B2' && this.lang === 0" class="padder-left"></span> <b> {{ skill.level }}</b>
+                     <span v-if="skill.level === 'B2' && lang === 0" class="padder-left"></span> <b> {{ skill.level }}</b>
                   </span>
                   <span class="spacer-left"> {{ skill.certification }} </span>
                </li>

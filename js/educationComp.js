@@ -4,7 +4,7 @@ Vue.component('education', {
       return {
          hobbyBoxEng: [
             {name: 'web development', icon: 'fas fa-globe', class: 'col-sm-offset-1'},
-            {name: 'css animation', icon: 'fas fa-user-ninja'},
+            {name: 'css анимация', icon: 'fas fa-user-ninja'},
             {name: 'video editing', icon: 'fas fa-video'},
             {name: 'fiction writing', icon: 'fas fa-keyboard'},
          ],
@@ -42,7 +42,7 @@ Vue.component('education', {
 
       <h2>{{language[lang].hobbies}}</h2>
       <div class="row">
-         <div  v-if="lang === 0" v-for="item in hobbyBoxRu" :key="item.name" class="col-sm-2 col-xs-6" :class="item.class">
+         <div v-if="lang === 0" v-for="item in hobbyBoxRu" :key="item.name" class="col-sm-2 col-xs-6" :class="item.class">
             <div class="icon-box">
                <div class="icon"><i :class="item.icon"></i></div>
                <h6>{{ item.name }}</h6>

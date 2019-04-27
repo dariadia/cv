@@ -3,7 +3,7 @@ let cv = new Vue({
     el: '#cv',
     data: {
         language: [
-            // заголовки, тексты и сообщения для русского языка
+            // russian data
             {
                 language: 'rus',
                 name: 'Дьячкова Дарья Валерьевна',
@@ -36,8 +36,8 @@ let cv = new Vue({
                     {name: 'Bootstrap', class: 'bar-fin-adv'},
                 ],
                 skillsAlso: 'Я также знакома с',
-                skillsPlus: ['git', 'webpack', 'bootstrap + Vue', 'HTML5 canvas'],
-                reasons: 'Меня вдохновило TODO',
+                skillsPlus: ['git', 'webpack', 'bootstrap + Vue', 'HTML5 canvas', 'БЭМ'],
+                reasons: 'Меня вдохновило ',
                 languages: 'знание языков',
                 languagesExt: [
                     {name: 'английский', level: 'C2', certification: 'CAE, Grade A'},
@@ -56,15 +56,15 @@ let cv = new Vue({
                 ],
                 myAccount: {caption: 'Мой профиль на Github', link: 'https://github.com/dariadia'},
                 portfolioItems: [
-                    {name: 'Лендинг', desc: 'адаптив, Bootstrap, jQuery', src: 'images/portfolio01.png', height: '250', link: ''},
-                    {name: 'Онлайн магазин', desc: 'js-сервер, Vue.js', src: 'images/portfolio02.png', height: '250', link: ''},
-                    {name: 'Лендинг', desc: 'адаптив, .scss', src: 'images/portfolio03.png', height: '200', link: ''},
-                    {name: 'Игра змейка', desc: ' js', src: 'images/portfolio04.png', height: '200', link: ''},
-                    {name: 'Лендинг', desc: 'параллакс-эффект', src: 'images/portfolio05.png', height: '200', link: ''},
+                    {name: 'Лендинг', desc: 'адаптив, Bootstrap, jQuery', src: 'images/portfolio01.png', height: '250', link: './portfolio/website-australia/index.html'},
+                    {name: 'Онлайн магазин', desc: 'js-сервер, Vue.js', src: 'images/portfolio02.png', height: '250', link: 'https://github.com/dariadia/homework-BRAND-shop.git'},
+                    {name: 'Лендинг', desc: 'адаптив, .scss, БЭМ', src: 'images/portfolio03.png', height: '200', link: './portfolio/coffeeshop/index.html'},
+                    {name: 'Игра змейка', desc: ' js', src: 'images/portfolio04.png', height: '200', link: './portfolio/snake_game/index.html'},
+                    {name: 'Лендинг', desc: 'параллакс-эффект', src: 'images/portfolio05.png', height: '200', link: './portfolio/parallax_website/index.html'},
                 ],
             }, 
 
-            // для английского
+            // english data
             {
                 language: 'eng',
                 name: 'Daria V. Diachkova',
@@ -97,7 +97,7 @@ let cv = new Vue({
                     {name: 'Bootstrap', class: 'bar-fin-adv'},
                 ],
                 skillsAlso: 'I also know',
-                skillsPlus: ['git', 'webpack', 'bootstrap + Vue', 'HTML5 canvas'],
+                skillsPlus: ['git', 'webpack', 'bootstrap + Vue', 'HTML5 canvas', 'BEM'],
                 reasons: 'Inspired TODO',
                 languages: 'Languages',
                 languagesExt: [
@@ -117,11 +117,17 @@ let cv = new Vue({
                     {title: 'Freelance'},
                 ],
                 myAccount: {caption: 'Follow me on Github', link: 'https://github.com/dariadia'},
-
+                portfolioItems: [
+                    {name: 'Landing page', desc: 'adaptive WD, Bootstrap, jQuery', src: 'images/portfolio01.png', height: '250', link: 'https://github.com/dariadia/website-australia.git'},
+                    {name: 'Online shop', desc: 'js-server, Vue.js', src: 'images/portfolio02.png', height: '250', link: 'https://github.com/dariadia/homework-BRAND-shop.git'},
+                    {name: 'Landing page', desc: 'adaptive, .scss', src: 'images/portfolio03.png', height: '200', link: 'https://github.com/dariadia/coffeeshop.git'},
+                    {name: 'The snake game', desc: ' js', src: 'images/portfolio04.png', height: '200', link: 'https://github.com/dariadia/snake_game.git'},
+                    {name: 'Landing page', desc: 'parallax', src: 'images/portfolio05.png', height: '200', link: 'https://github.com/dariadia/parallax_website.git'},
+                ],
             }, 
 
         ],
-        lang: 0, // по дефолту язык – русский, он переключается нажатием на соответствующую кнопку
+        lang: 0, // default (0) language is russian
         currentSection: 'home',
         sections: ['home', 'about', 'skills', 'education', 'portfolio', 'contacts'],
         email: 'dariadiachkova@mail.ru',
@@ -130,10 +136,10 @@ let cv = new Vue({
     },
     methods: {
         toggleLanguage(){
-            // если язык русский, клик на кнопку переведет резюме на английский
+            // if the language is russian (0), this switches language to eng (1)
             if (this.lang === 0){
                 this.lang = 1;
-            } else { // или обратно на русский
+            } else { // or back to russian (0) otherwise
                 this.lang = 0;
             }
         },

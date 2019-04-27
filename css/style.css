@@ -282,15 +282,17 @@ h3.small-margin-bottom {
 	color: #4169e1!important;
 }
 .list-skill:hover .royal-blue-hov {
-	color: #4169e1;
+    color: #4169e1;
+    transition: 0.3s color;
 }
 .portfolio-item:hover .royal-blue-hov {
     color: #4169e1;
+    transition: 0.3s color;
 }
 .li-glowing:hover {
 	filter: drop-shadow(4px 3px 5px rgb(201, 201, 254));
 	color: blue;
-	transition: 0.3s all;
+	transition: 0.4s all;
 }
 .logo {
     margin-top: 5px;
