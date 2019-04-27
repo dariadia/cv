@@ -6,9 +6,9 @@ Vue.component('contacts', {
          <h2>{{language[lang].contact}}</h2>
                <div class="contacts-flex">
                <ul class="list-icons list-unstyled">
-                  <li><b>{{language[lang].address}}</b>: {{language[lang].addressLine}}</li>
                   <li><b>{{language[lang].tel}}</b>: {{tel}}</li>
                   <li><b>Email</b>: <a href="mailto:dariadiachkova@mail.ru">{{email}}</a></li>
+                  <li><b>{{language[lang].address}}</b>: {{language[lang].addressLine}}</li>
                </ul>
                <i class="fas fa-mail-bulk"></i>
                </div>

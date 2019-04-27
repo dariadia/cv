@@ -14,7 +14,7 @@ Vue.component('about', {
             <div><i v-for="decor in 5" class="fab fa-pagelines"></i></div>
             <ul class="list-unstyled text-uppercase">
                <li v-for="item in language[lang].personalInfo"><b>{{item.point}}</b> {{item.info}}</li>
-               <li> <a href="mailto:dariadiachkova@mail.ru">{{email}}</a></li>
+               <li><i class="far fa-envelope-open"></i> <a href="mailto:dariadiachkova@mail.ru">{{email}}</a></li>
             </ul> 
          </div> 
       </div> 

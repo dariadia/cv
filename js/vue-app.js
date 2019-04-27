@@ -1,3 +1,4 @@
+Vue.use(VueSmoothScroll)
 let cv = new Vue({
     el: '#cv',
     data: {
@@ -14,8 +15,8 @@ let cv = new Vue({
                 about: 'Обо мне',
                 portfolio: 'Портфолио',
                 education: 'Образование',
+                skills: 'Навыки',
                 hobbies: 'Хобби и Интересы',
-                hobbiesExt: '',
                 download: 'Скачать моё резюме',
                 tel: 'тел',
                 cv: 'Резюме',
@@ -27,7 +28,25 @@ let cv = new Vue({
                     {point: 'Дата рождения: ', info: ' 6/06/1997'},
                     {point: 'тел: ', info: ' +7 (917) 168 1854'},
                 ],
+                skillsExt: [
+                    {name: 'HTML & CSS', extra: ': HTML5, SCSS, CSS3 & медиа-запросы, адаптивная вёрстка', class: 'bar-fin-adv'},
+                    {name: 'JS', class: 'bar-fin-upp'},
+                    {name: 'Vue.js', class: 'bar-fin-upp'},
+                    {name: 'jQuery', class: 'bar-fin-int'},
+                    {name: 'Bootstrap', class: 'bar-fin-adv'},
+                ],
+                skillsAlso: 'Я также знакома с',
+                skillsPlus: ['git', 'webpack', 'bootstrap + Vue', 'HTML5 canvas'],
                 reasons: 'Меня вдохновило TODO',
+                languages: 'знание языков',
+                languagesExt: [
+                    {name: 'английский', level: 'C2', certification: 'CAE, Grade A'},
+                    {name: 'немецкий', level: 'B2', certification: ''},
+                ],
+                education: 'образование',
+                department: 'факультет веб-разработки',
+                uni: 'НИУ ВШЭ',
+                uniDep: ' Факультет мировой экономики и мировой политики'
             }, 
 
             // для английского
@@ -41,8 +60,8 @@ let cv = new Vue({
                 about: 'About Me',
                 portfolio: 'Portfolio',
                 education: 'Education',
+                skills: 'Skills',
                 hobbies: 'Hobbies & Interests',
-                hobbiesExt: '',
                 contacts: 'Contacts',
                 download: 'Download My CV ',
                 tel: 'tel',
@@ -55,7 +74,20 @@ let cv = new Vue({
                     {point: 'Date of Birth: ', info: ' 6/06/1997'},
                     {point: 'tel: ', info: ' +7 (917) 168 1854'},
                 ],
+                skillsExt: [
+                    {name: 'HTML & CSS', extra: ': HTML5, SCSS, CSS3 & media queries, Adaptive Web Design', class: 'bar-fin-adv'},
+                    {name: 'JS', class: 'bar-fin-upp'},
+                    {name: 'Vue.js', class: 'bar-fin-upp'},
+                    {name: 'jQuery', class: 'bar-fin-int'},
+                    {name: 'Bootstrap', class: 'bar-fin-adv'},
+                ],
+                skillsAlso: 'I also know',
+                skillsPlus: ['git', 'webpack', 'bootstrap + Vue', 'HTML5 canvas'],
                 reasons: 'Inspired TODO',
+                education: 'education',
+                department: 'The Department of Web-development',
+                uni: 'HSE',
+                uniDep: 'The Department of World Economy and International Affairs',
             }, 
 
         ],
@@ -128,17 +160,3 @@ let cv = new Vue({
     },
 });
 
-
-VueScrollTo.setDefaults({
-    container: "body",
-    duration: 500,
-    easing: "ease",
-    offset: 0,
-    force: true,
-    cancelable: true,
-    onStart: false,
-    onDone: false,
-    onCancel: false,
-    x: false,
-    y: true
-});
