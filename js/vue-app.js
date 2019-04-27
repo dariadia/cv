@@ -37,7 +37,7 @@ let cv = new Vue({
                 ],
                 skillsAlso: 'Я также знакома с',
                 skillsPlus: ['git', 'webpack', 'bootstrap + Vue', 'HTML5 canvas', 'БЭМ'],
-                reasons: 'Меня вдохновило ',
+                reasons: 'На 4 курсе НИУ ВШЭ (программа Международные отношения), когда осознал свою страсть к программированию и веб-разработке в частности. Поэтому я пошел за своей новой мечтой и решил возобновить свой карьерный путь. В декабре прошлого года я записался в GeekUniversity Geekbrains и только что закончил свой первый семестр. Не могу дождаться, чтобы узнать больше!',
                 languages: 'знание языков',
                 languagesExt: [
                     {name: 'английский', level: 'C2', certification: 'CAE, Grade A'},
@@ -98,7 +98,7 @@ let cv = new Vue({
                 ],
                 skillsAlso: 'I also know',
                 skillsPlus: ['git', 'webpack', 'bootstrap + Vue', 'HTML5 canvas', 'BEM'],
-                reasons: 'Inspired TODO',
+                reasons: 'I was a senior at the HSE [International Affairs major, Economics minor] when I realised my passion for programming and web development in particular. So I went after my new dream and chose to restart my career path. I enrolled in Geekbrains` GeekUniversity last December and have just finished my first semester (frontend). Can`t wait to discover even more!',
                 languages: 'Languages',
                 languagesExt: [
                     {name: 'russian', level: 'native'},

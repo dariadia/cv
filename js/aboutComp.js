@@ -7,7 +7,7 @@ Vue.component('about', {
          <div class="col-sm-3">
             <img src="images/head01.png" alt="daria's photo" class="img-responsive section-img img-border">
          </div> 
-         <div class="col-sm-9">
+         <div class="col-sm-7">
             <h3 class="small-margin-bottom"> {{language[lang].name}}</h3>
             <h5>{{language[lang].developerExt}}</h5>
             <p>{{language[lang].reasons}}</p>
