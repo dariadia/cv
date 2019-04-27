@@ -41,12 +41,19 @@ let cv = new Vue({
                 languages: 'знание языков',
                 languagesExt: [
                     {name: 'английский', level: 'C2', certification: 'CAE, Grade A'},
-                    {name: 'немецкий', level: 'B2', certification: ''},
+                    {name: 'немецкий', level: 'B2'},
                 ],
                 education: 'образование',
                 department: 'факультет веб-разработки',
                 uni: 'НИУ ВШЭ',
-                uniDep: ' Факультет мировой экономики и мировой политики'
+                uniDep: ' Факультет мировой экономики и мировой политики',
+                experience: 'Опыт работы',
+                experienceExt: [
+                    {title: 'Практикант', occupation: 'Корпоративный университет Сбербанка, академия технологий и данных', time: '1 апреля 2019 – 1 мая 2019'},
+                    {title: 'Стажёр', occupation: 'отдел продаж AVON, подразделение Коммуникаций', time: 'апрель 2018 – август 2018'},
+                    {title: 'волонтёр', occupation: 'Школа авторов «Учи Учёного» (Журнал «Россия в глобальной политике»)', time: 'октябрь 2017 – май 2018'},
+                    {title: 'Фриланс'},
+                ],
             }, 
 
             // для английского
@@ -84,10 +91,23 @@ let cv = new Vue({
                 skillsAlso: 'I also know',
                 skillsPlus: ['git', 'webpack', 'bootstrap + Vue', 'HTML5 canvas'],
                 reasons: 'Inspired TODO',
+                languages: 'Languages',
+                languagesExt: [
+                    {name: 'russian', level: 'native'},
+                    {name: 'english', level: 'C2', certification: 'CAE, Grade A'},
+                    {name: 'german', level: 'B2', certification: ''},
+                ],
                 education: 'education',
                 department: 'The Department of Web-development',
                 uni: 'HSE',
                 uniDep: 'The Department of World Economy and International Affairs',
+                experience: 'Experience',
+                experienceExt: [
+                    {title: 'Intern', occupation: 'Sberbank Corporate University, Academy of Technology and Data', time: 'April 1, 2019 – May 1, 2019'},
+                    {title: 'Intern', occupation: 'AVON Sales Department, Communications Division', time: 'April 2018 - August 2018', time: 'April 2018 – August 2018'},
+                    {title: 'Volunteer', occupation: 'Scientific Reaseach School (curated by the Russia in Global Affairs Journal)', time: 'October 2017 - May 2018'},
+                    {title: 'Freelance'},
+                ],
             }, 
 
         ],

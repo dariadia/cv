@@ -237,7 +237,15 @@ h3.small-margin-bottom {
 }
 
 .capitalise {
-    text-transform: capitalize !important;
+    text-transform: capitalize!important;
+}
+
+.lowercase {
+	text-transform: lowercase!important;
+}
+
+.align-right {
+	text-align: right!important;
 }
 
 .info {
@@ -251,6 +259,12 @@ h3.small-margin-bottom {
     justify-content: space-between;
 }
 
+.flex-row {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .label {
 	margin-bottom: 10px;
 	color: #434b4d;
@@ -259,7 +273,7 @@ h3.small-margin-bottom {
 .pale-iron {
 	color: #727879;
 }
-.royal-blue {
+.royal-blue-font {
 	color: #4169e1!important;
 }
 .list-skill:hover .royal-blue-hov {

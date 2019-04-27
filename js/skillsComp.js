@@ -17,7 +17,7 @@ Vue.component('skills', {
             <h4>{{ language[lang].skillsAlso }}</h4>
             <div class="row spacer-left-sm">
                   <ul class="list-icons iron bold-list">
-                     <li v-for="skill in language[lang].skillsPlus" :key="skill" class="li-glowing"> <i class="fas fa-map-pin royal-blue"></i> {{ skill }}</li>
+                     <li v-for="skill in language[lang].skillsPlus" :key="skill" class="li-glowing"> <i class="fas fa-map-pin royal-blue-font"></i> {{ skill }}</li>
                   </ul>
             </div>   
          </div>   
@@ -28,10 +28,10 @@ Vue.component('skills', {
          <div class="col-sm-4">
             <ul class="list-icons iron bold-list">
                <li class="list-skill li-glowing" v-for="skill in language[lang].languagesExt" :key="skill.name"> 
-                  <i class="fas fa-atlas royal-blue spacer-right"></i> 
+                  <i class="fas fa-atlas royal-blue-font spacer-right"></i> 
                      {{ skill.name }} 
                   <span class="royal-blue-hov spacer-left spacer-right"> 
-                     <span v-if="skill.level === 'B2'" class="padder-left"></span> <b> {{ skill.level }}</b>
+                     <span v-if="skill.level === 'B2' && this.lang === 0" class="padder-left"></span> <b> {{ skill.level }}</b>
                   </span>
                   <span class="spacer-left"> {{ skill.certification }} </span>
                </li>
@@ -40,9 +40,18 @@ Vue.component('skills', {
       </div> 
       <div class="spacer"></div>
       <div class="row">
-         <div class="col-sm-4">
-            <h4>Опыт работы</h4>
-
+         <div class="col-sm-6">
+            <h4>{{ language[lang].experience }}</h4>
+               <ul class="list-icons iron bold-list">
+                  <li class="list-skill" v-for="item in language[lang].experienceExt" :key="item.time"> 
+                     <i class="fas fa-briefcase"></i> 
+                     <div class="flex-row">
+                        <div class="royal-blue-font"> <b>{{ item.title }}</b> </div>
+                        <div class="spacer-left align-right capitalise"> {{ item.occupation }}</div>
+                     </div>
+                     <div :class="{lowercase: lang === 0, capitalise: lang === 1}" class="align-right royal-blue-hov"> {{ item.time }} </div>
+                  </li>
+               </ul>
          </div>
       </div>
    </div>   
