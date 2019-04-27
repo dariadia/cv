@@ -91,6 +91,6 @@
 			$('.slide-out-overlay').fadeOut(250);
 			$('.slide-out').removeClass('open');
 		});
-
 	});
+	
 })(jQuery);

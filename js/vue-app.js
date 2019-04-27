@@ -54,6 +54,14 @@ let cv = new Vue({
                     {title: 'волонтёр', occupation: 'Школа авторов «Учи Учёного» (Журнал «Россия в глобальной политике»)', time: 'октябрь 2017 – май 2018'},
                     {title: 'Фриланс'},
                 ],
+                myAccount: {caption: 'Мой профиль на Github', link: 'https://github.com/dariadia'},
+                portfolioItems: [
+                    {name: 'Лендинг', desc: 'адаптив, Bootstrap, jQuery', src: 'images/portfolio01.png', height: '250', link: ''},
+                    {name: 'Онлайн магазин', desc: 'js-сервер, Vue.js', src: 'images/portfolio02.png', height: '250', link: ''},
+                    {name: 'Лендинг', desc: 'адаптив, .scss', src: 'images/portfolio03.png', height: '200', link: ''},
+                    {name: 'Игра змейка', desc: ' js', src: 'images/portfolio04.png', height: '200', link: ''},
+                    {name: 'Лендинг', desc: 'параллакс-эффект', src: 'images/portfolio05.png', height: '200', link: ''},
+                ],
             }, 
 
             // для английского
@@ -108,6 +116,8 @@ let cv = new Vue({
                     {title: 'Volunteer', occupation: 'Scientific Reaseach School (curated by the Russia in Global Affairs Journal)', time: 'October 2017 - May 2018'},
                     {title: 'Freelance'},
                 ],
+                myAccount: {caption: 'Follow me on Github', link: 'https://github.com/dariadia'},
+
             }, 
 
         ],
