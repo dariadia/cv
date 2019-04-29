@@ -41,10 +41,10 @@
 				<div class="content">
 					<!-- content -->
 					<h5>{{ language[lang].name }}</h5>
-					<span>Front-end Developer</span>
+					<span>Frontend Developer</span>
 				</div>
 				<div class="text-right">
-					<a href="" class="button link-button white icon-left"><i
+					<a href="Diachkova_CV_frontend.doc" target="blank" class="button link-button white icon-left"><i
 							class="fas fa-download"></i>{{language[lang].download}} (.doc) </a>
 				</div>
 			</header>
@@ -63,7 +63,7 @@
 					class="button solid-button royal-blue "
 					@click="toggleLanguage()">{{language[lang].language}}</button>
 				<div class="right-icons">
-					<a href="" class="download"><i class="fas fa-download"></i></a>
+					<a href="Diachkova_CV_frontend.doc" target="blank" class="download"><i class="fas fa-download"></i></a>
 					<a href="" class="share"><i class="fas fa-user-circle"></i></a>
 				</div>
 				<!-- Popup -->
@@ -103,7 +103,10 @@
 		<!-- Sections -->
 		<div class="sections">
 			<div class="sections-wrapper clearfix">
-				<component :is="createComp" :language="language" :lang="lang" :email="email" :tel="tel"></component>
+					<transition name="fade">
+						<component :is="createComp" style="transition-duration: 0.2s;" :language="language" :lang="lang" :email="email" :tel="tel"></component>
+					</transition>
+				
 			</div>
 		</div>
 

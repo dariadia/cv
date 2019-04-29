@@ -25,12 +25,12 @@ Vue.component('skills', {
       <div class="spacer"></div>
       <h4>{{ language[lang].languages }}</h4>
       <div class="row">
-         <div class="col-sm-4">
+         <div class="col-sm-6">
             <ul class="list-icons iron bold-list">
-               <li class="list-skill li-glowing" v-for="skill in language[lang].languagesExt" :key="skill.name"> 
+               <li class="list-skill" v-for="skill in language[lang].languagesExt" :key="skill.name"> 
                   <i class="fas fa-atlas royal-blue-font spacer-right"></i> 
                      {{ skill.name }} 
-                  <span class="royal-blue-hov spacer-left spacer-right"> 
+                  <span class="royal-blue-hov li-glowing spacer-left spacer-right"> 
                      <span v-if="skill.level === 'B2' && lang === 0" class="padder-left"></span> <b> {{ skill.level }}</b>
                   </span>
                   <span class="spacer-left"> {{ skill.certification }} </span>

@@ -11,6 +11,7 @@ Vue.component('about', {
             <h3 class="small-margin-bottom"> {{language[lang].name}}</h3>
             <h5>{{language[lang].developerExt}}</h5>
             <p>{{language[lang].reasons}}</p>
+            <p>{{ language[lang].scholarship}}</p>
             <div><i v-for="decor in 5" class="fab fa-pagelines"></i></div>
             <ul class="list-unstyled text-uppercase">
                <li v-for="item in language[lang].personalInfo"><b>{{item.point}}</b> {{item.info}}</li>
