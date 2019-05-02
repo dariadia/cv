@@ -4,7 +4,7 @@ Vue.component('portfolio', {
    <div class="container">
       <h2>{{language[lang].portfolio}}</h2>
       <div class="row">
-         <div class="col-sm-9">
+         <div class="col-sm-12">
 
             <div class="box">
                <div v-for="(item, index) in language[lang].portfolioItems" v-if="index < 2" :key="item.src" class="portfolio-item">
