@@ -57,12 +57,12 @@ let cv = new Vue({
                 ],
                 myAccount: {caption: 'Мой профиль на Github', link: 'https://github.com/dariadia'},
                 portfolioItems: [
-                    {name: 'Лендинг', desc: 'адаптив, Bootstrap, jQuery', src: 'images/portfolio01.png', height: '250', link: './portfolio/website-australia/index.html'},
-                    {name: 'Онлайн магазин', desc: 'js-сервер, Vue.js', src: 'images/portfolio02.png', height: '250', link: 'https://github.com/dariadia/homework-BRAND-shop.git'},
-                    {name: 'Лендинг', desc: 'адаптив, .scss, БЭМ', src: 'images/portfolio03.png', height: '200', link: './portfolio/coffeeshop/index.html'},
-                    {name: 'Игра змейка', desc: ' js', src: 'images/portfolio04.png', height: '200', link: './portfolio/snake_game/index.html'},
-                    {name: 'Лендинг', desc: 'параллакс-эффект', src: 'images/portfolio05.png', height: '200', link: './portfolio/parallax_website/index.html'},
-                    {name: 'Веб-страничка', desc: 'Vue.js, Vue CLI, Webpack, Bootstrap + Vue', src: 'images/portfolio06.png', height: '200', link: 'https://github.com/dariadia/sample-vue-cli-project.git'},
+                    {name: 'Лендинг', desc: 'адаптив, Bootstrap, jQuery', src: 'images/portfolio01.png', height: '350', link: './portfolio/website-australia/index.html'},
+                    {name: 'Онлайн магазин', desc: 'js-сервер, Vue.js', src: 'images/portfolio02.png', height: '350', link: 'https://github.com/dariadia/homework-BRAND-shop.git'},
+                    {name: 'Лендинг', desc: 'адаптив, .scss, БЭМ', src: 'images/portfolio03.png', height: '300', link: './portfolio/coffeeshop/index.html'},
+                    {name: 'Игра змейка', desc: ' js', src: 'images/portfolio04.png', height: '300', link: './portfolio/snake_game/index.html'},
+                    {name: 'Лендинг', desc: 'параллакс-эффект', src: 'images/portfolio05.png', height: '300', link: './portfolio/parallax_website/index.html'},
+                    {name: 'Веб-страничка', desc: 'Vue.js, Vue CLI, Webpack, Bootstrap + Vue', src: 'images/portfolio06.png', height: '300', link: 'https://github.com/dariadia/sample-vue-cli-project.git'},
                 ],
             }, 
 
