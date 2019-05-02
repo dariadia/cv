@@ -4,13 +4,13 @@ Vue.component('education', {
       return {
          hobbyBoxEng: [
             {name: 'web development', icon: 'fas fa-globe', class: 'col-sm-offset-1'},
-            {name: 'css animation', icon: 'fas fa-user-ninja'},
+            {name: 'Vue.js', icon: 'fas fa-user-ninja'},
             {name: 'video editing', icon: 'fas fa-video'},
             {name: 'fiction writing', icon: 'fas fa-keyboard'},
          ],
          hobbyBoxRu: [
             {name: 'веб разработка', icon: 'fas fa-globe', class: 'col-sm-offset-1'},
-            {name: 'css анимация', icon: 'fas fa-user-ninja'},
+            {name: 'Vue.js', icon: 'fas fa-user-ninja'},
             {name: 'монтаж & обработка видео', icon: 'fas fa-video'},
             {name: 'написание рассказов', icon: 'fas fa-keyboard'},
          ],
