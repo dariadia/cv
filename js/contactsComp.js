@@ -14,6 +14,7 @@ Vue.component('contacts', {
                </div>
                <div class="spacer"></div>
                <social-icons></social-icons>
+               <div class="spacer"></div>
       </div>  
    </section>`
 });
