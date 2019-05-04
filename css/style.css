@@ -197,6 +197,11 @@ h3.small-margin-bottom {
     margin-bottom: 6px;
 }
 
+.container {
+    width: 1510px;
+    margin: 0 auto;
+}
+
 .fa-chevron {
     color: #4169e1;
     font-size: 55px;

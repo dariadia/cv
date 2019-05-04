@@ -62,7 +62,7 @@ let cv = new Vue({
                     {name: 'Лендинг', desc: 'адаптив, .scss, БЭМ', src: 'images/portfolio03.png', height: '300', link: './portfolio/coffeeshop/index.html'},
                     {name: 'Игра змейка', desc: ' js', src: 'images/portfolio04.png', height: '300', link: './portfolio/snake_game/index.html'},
                     {name: 'Лендинг', desc: 'параллакс-эффект', src: 'images/portfolio05.png', height: '300', link: './portfolio/parallax_website/index.html'},
-                    {name: 'Веб-страничка', desc: 'Vue.js, Vue CLI, Webpack, Bootstrap + Vue', src: 'images/portfolio06.png', height: '300', link: 'https://github.com/dariadia/sample-vue-cli-project.git'},
+                    {name: 'Веб-страничка', desc: 'Vue.js, Vue CLI, Webpack, Bootstrap+Vue', src: 'images/portfolio06.png', height: '300', link: 'https://github.com/dariadia/sample-vue-cli-project.git'},
                 ],
             }, 
 
@@ -125,7 +125,7 @@ let cv = new Vue({
                     {name: 'Landing page', desc: 'adaptive, .scss', src: 'images/portfolio03.png', height: '300', link: './portfolio/coffeeshop/index.html'},
                     {name: 'The snake game', desc: ' js', src: 'images/portfolio04.png', height: '300', link: './portfolio/snake_game/index.html'},
                     {name: 'Landing page', desc: 'parallax', src: 'images/portfolio05.png', height: '300', link: './portfolio/parallax_website/index.html'},
-                    {name: 'Web-page', desc: 'Vue.js, Vue CLI, Webpack, Bootstrap + Vue', src: 'images/portfolio06.png', height: '300', link: 'https://github.com/dariadia/sample-vue-cli-project.git'},
+                    {name: 'Web-page', desc: 'Vue.js, Vue CLI, Webpack, Bootstrap+Vue', src: 'images/portfolio06.png', height: '300', link: 'https://github.com/dariadia/sample-vue-cli-project.git'},
                 ],
             }, 
 
