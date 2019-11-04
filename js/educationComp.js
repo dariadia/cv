@@ -1,22 +1,30 @@
-Vue.component('education', {
-   props: ['language', 'lang', ],
-   data(){
-      return {
-         hobbyBoxEng: [
-            {name: 'web development', icon: 'fas fa-globe', class: 'col-sm-offset-1'},
-            {name: 'Vue.js', icon: 'fas fa-user-ninja'},
-            {name: 'video editing', icon: 'fas fa-video'},
-            {name: 'fiction writing', icon: 'fas fa-keyboard'},
-         ],
-         hobbyBoxRu: [
-            {name: 'веб разработка', icon: 'fas fa-globe', class: 'col-sm-offset-1'},
-            {name: 'Vue.js', icon: 'fas fa-user-ninja'},
-            {name: 'монтаж & обработка видео', icon: 'fas fa-video'},
-            {name: 'написание рассказов', icon: 'fas fa-keyboard'},
-         ],
-      }
-   },
-   template: `<section id="education">
+Vue.component("education", {
+  props: ["language", "lang"],
+  data() {
+    return {
+      hobbyBoxEng: [
+        { name: "Vue.js", icon: "fas fa-user-ninja" },
+        { name: "I edit videos", icon: "fas fa-video" },
+        { name: "I write creative fiction", icon: "fas fa-keyboard" },
+        {
+          name: "I craft from epoxy resin",
+          icon: "fas fa-globe",
+          class: "col-sm-offset-1"
+        }
+      ],
+      hobbyBoxRu: [
+        { name: "Vue.js", icon: "fas fa-user-ninja" },
+        { name: "видео монтаж", icon: "fas fa-video" },
+        { name: "пишу роман", icon: "fas fa-keyboard" },
+        {
+          name: "мастерю из эпоксидной смолы",
+          icon: "fas fa-globe",
+          class: "col-sm-offset-1"
+        }
+      ]
+    };
+  },
+  template: `<section id="education">
    <div class="container">
       <h2>{{language[lang].education}}</h2>
       <div class="education clearfix">
@@ -42,18 +50,28 @@ Vue.component('education', {
 
       <h2>{{language[lang].hobbies}}</h2>
       <div class="row">
-         <div v-if="lang === 0" v-for="item in hobbyBoxRu" :key="item.name" class="col-sm-2 col-xs-6" :class="item.class">
-            <div class="icon-box">
-               <div class="icon"><i :class="item.icon"></i></div>
-               <h6>{{ item.name }}</h6>
-            </div>  
+         <div 
+            v-if="lang === 0" 
+            v-for="item in hobbyBoxRu" 
+            :key="item.name" 
+            class="col-sm-2 col-xs-6" 
+            :class="item.class">
+               <div class="icon-box">
+                  <div class="icon"><i :class="item.icon"></i></div>
+                  <h6>{{ item.name }}</h6>
+               </div>  
          </div> 
 
-         <div v-if="lang === 1" v-for="item in hobbyBoxEng" :key="item.name" class="col-sm-2 col-xs-6" :class="item.class">
-            <div class="icon-box">
-               <div class="icon"><i :class="item.icon"></i></div>
-               <h6>{{ item.name }}</h6>
-            </div>  
+         <div 
+            v-if="lang === 1" 
+            v-for="item in hobbyBoxEng" 
+            :key="item.name" 
+            class="col-sm-2 col-xs-6" 
+            :class="item.class">
+               <div class="icon-box">
+                  <div class="icon"><i :class="item.icon"></i></div>
+                  <h6>{{ item.name }}</h6>
+               </div>  
          </div> 
       </div> 
    </div>  

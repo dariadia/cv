@@ -1,6 +1,6 @@
-Vue.component('about', {
-   props: ['language', 'lang', 'email'],
-   template: `<section id="about">
+Vue.component("about", {
+  props: ["language", "lang", "email"],
+  template: `<section id="about">
    <div class="container">
       <h2>{{language[lang].about}}</h2>
       <div class="row">

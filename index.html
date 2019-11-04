@@ -1,175 +1,229 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Резюме. Дьячкова Дарья В.</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- Fonts -->
+    <link
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- Vue development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Style.css -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<head>
+  <body>
+    <div id="cv">
+      <!-- Slide Out -->
+      <div class="slide-out-overlay"></div>
+      <div class="slide-out">
+        <header class="slide-out-header clearfix">
+          <div class="clearfix">
+            <a href="" class="slide-out-close pull-left"
+              ><i class="fas fa-times"></i
+            ></a>
+            <a href="" class="slide-out-share pull-right"
+              ><i class="fas fa-user-circle"></i
+            ></a>
+          </div>
+          <div class="slide-out-popup">
+            <nav class="social-nav">
+              <social-links></social-links>
+            </nav>
+          </div>
+          <div class="image">
+            <img
+              src="images/head01.png"
+              alt="daria's photo"
+              class="img-responsive"
+            />
+          </div>
+          <div class="content">
+            <!-- content -->
+            <h5>{{ language[lang].name }}</h5>
+            <span>Frontend Developer</span>
+          </div>
+          <div class="text-right">
+            <a
+              href="Diachkova_CV_frontend.doc"
+              target="blank"
+              class="button link-button white icon-left"
+              ><i class="fas fa-download"></i
+              >{{ language[lang].download }} (.doc)
+            </a>
+          </div>
+        </header>
+        <div class="slide-out-widgets">
+          <div class="slide-out-widget">
+            <h5>{{ language[lang].tel }}: {{ tel }}</h5>
+            <h5>
+              <i class="far fa-envelope-open"></i>
+              <a href="mailto:dariadiachkova@mail.ru">{{ email }}</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <!-- end .slide-out -->
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Резюме. Дьячкова Дарья В.</title>
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	
-	<!-- Font Awesome Icons -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<!-- Font Awesome -->
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-	<!-- Vue development version, includes helpful console warnings -->
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<!-- Style.css -->
-	<link href="css/style.css" rel="stylesheet">
+      <header class="header">
+        <div class="top clearfix">
+          <a @click="currentSection = 'contacts'" class="available"
+            ><span class="span-contact">{{ language[lang].contact }}</span></a
+          ><button
+            class="button solid-button royal-blue "
+            @click="toggleLanguage()"
+          >
+            {{ language[lang].language }}
+          </button>
+          <div class="right-icons">
+            <a href="Diachkova_CV_frontend.doc" target="blank" class="download"
+              ><i class="fas fa-download"></i
+            ></a>
+            <a href="" class="share"><i class="fas fa-user-circle"></i></a>
+          </div>
+          <!-- Popup -->
+          <div class="popup">
+            <nav class="social-nav">
+              <social-links></social-links>
+            </nav>
+          </div>
+        </div>
+        <div class="bottom clearfix">
+          <div class="title">
+            <a href="index.html">{{ language[lang].cv }}</a>
+          </div>
+          <div class="header-action-button-wrapper">
+            <a href="" class="header-action-button action-button"
+              ><i class="fas fa-plus"></i
+            ></a>
+          </div>
+          <a href="" class="responsive-menu-open"
+            >Menu<i class="fa fa-bars"></i
+          ></a>
+          <nav class="main-nav">
+            <ul class="list-unstyled">
+              <li
+                v-for="section in sections"
+                :key="section"
+                @click="currentSection = section"
+                :class="{active: currentSection == section}"
+              >
+                <a href="#">{{ getSectionName(section) }}</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="responsive-menu">
+        <a href="" class="responsive-menu-close"
+          >{{ language[lang].close }} <i class="ion-android-close"></i
+        ></a>
+        <nav class="responsive-nav"></nav>
+      </div>
 
-</head>
+      <!-- Section Navigation -->
+      <div class="section-nav">
+        <nav class="section1">
+          <i
+            @click="previousSection()"
+            class="fas fa-chevron fa-chevron-circle-left"
+          ></i>
+          <i
+            @click="nextSection()"
+            class="fas fa-chevron fa-chevron-circle-right"
+          ></i>
+        </nav>
+      </div>
 
-<body>
-	<div id="cv">
-		<!-- Slide Out -->
-		<div class="slide-out-overlay"></div>
-		<div class="slide-out">
-			<header class="slide-out-header clearfix">
-				<div class="clearfix">
-					<a href="" class="slide-out-close pull-left"><i class="fas fa-times"></i></a>
-					<a href="" class="slide-out-share pull-right"><i class="fas fa-user-circle"></i></a>
-				</div>
-				<div class="slide-out-popup">
-					<nav class="social-nav">
-						<social-links></social-links>
-					</nav>
-				</div>
-				<div class="image"><img src="images/head01.png" alt="daria's photo" class="img-responsive"></div>
-				<div class="content">
-					<!-- content -->
-					<h5>{{ language[lang].name }}</h5>
-					<span>Frontend Developer</span>
-				</div>
-				<div class="text-right">
-					<a href="Diachkova_CV_frontend.doc" target="blank" class="button link-button white icon-left"><i
-							class="fas fa-download"></i>{{language[lang].download}} (.doc) </a>
-				</div>
-			</header>
-			<div class="slide-out-widgets">
-				<div class="slide-out-widget">
-					<h5>{{language[lang].tel}}: {{tel}}</h5>
-					<h5><i class="far fa-envelope-open"></i> <a href="mailto:dariadiachkova@mail.ru">{{email}}</a></h5>
-				</div>
-			</div>
-		</div> <!-- end .slide-out -->
+      <div class="container">
+        <!-- Sections -->
+        <div class="sections">
+          <div class="sections-wrapper clearfix">
+            <transition name="fade">
+              <component
+                :is="createComp"
+                style="transition-duration: 0.2s;"
+                :language="language"
+                :lang="lang"
+                :email="email"
+                :tel="tel"
+              ></component>
+            </transition>
+          </div>
+        </div>
+      </div>
 
-		<header class="header">
-			<div class="top clearfix">
-				<a @click="currentSection = 'contacts'" class="available"><span
-						class="span-contact">{{language[lang].contact}}</span></a><button
-					class="button solid-button royal-blue "
-					@click="toggleLanguage()">{{language[lang].language}}</button>
-				<div class="right-icons">
-					<a href="Diachkova_CV_frontend.doc" target="blank" class="download"><i class="fas fa-download"></i></a>
-					<a href="" class="share"><i class="fas fa-user-circle"></i></a>
-				</div>
-				<!-- Popup -->
-				<div class="popup">
-					<nav class="social-nav">
-						<social-links></social-links>
-					</nav>
-				</div>
-			</div>
-			<div class="bottom clearfix">
-				<div class="title"><a href="index.html">{{ language[lang].cv }}</a></div>
-				<div class="header-action-button-wrapper">
-					<a href="" class="header-action-button action-button"><i class="fas fa-plus"></i></a>
-				</div>
-				<a href="" class="responsive-menu-open">Menu<i class="fa fa-bars"></i></a>
-				<nav class="main-nav">
-					<ul class="list-unstyled">
-						<li v-for="section in sections" :key="section" @click="currentSection = section"
-							:class="{active: currentSection == section}"><a href="#">{{getSectionName(section)}}</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<div class="responsive-menu">
-			<a href="" class="responsive-menu-close">{{language[lang].close}} <i class="ion-android-close"></i></a>
-			<nav class="responsive-nav"></nav>
-		</div>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="top">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <h4>{{ language[lang].address }}</h4>
+                <p>{{ language[lang].addressLine }}</p>
+              </div>
+              <div class="col-sm-4">
+                <social-icons></social-icons>
+              </div>
+              <div class="col-sm-4">
+                <h4>{{ language[lang].contacts }}</h4>
+                <p>
+                  {{ language[lang].tel }}: {{ tel }} <br />Email:
+                  <a href="mailto:dariadiachkova@mail.ru">{{ email }}</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="logo">
+            <img src="images/logo.png" height="30" alt="logo" />
+          </div>
 
-		<!-- Section Navigation -->
-		<div class="section-nav">
-			<nav class="section1">
-				<i @click="previousSection()" class="fas fa-chevron fa-chevron-circle-left"></i>
-				<i @click="nextSection()" class="fas fa-chevron fa-chevron-circle-right"></i>
-			</nav>
-		</div>
+          <span>&copy; 2019</span>
+        </div>
+      </footer>
+    </div>
+    <!-- end .cv (main vue app) -->
 
-		<div class="container">
-			<!-- Sections -->
-		<div class="sections">
-			<div class="sections-wrapper clearfix">
-					<transition name="fade">
-						<component :is="createComp" style="transition-duration: 0.2s;" :language="language" :lang="lang" :email="email" :tel="tel"></component>
-					</transition>
-				
-			</div>
-		</div>
-		</div>
-		
-
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="top">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-4">
-							<h4>{{language[lang].address}}</h4>
-							<p>{{language[lang].addressLine}}</p>
-						</div>
-						<div class="col-sm-4">
-							<social-icons></social-icons>
-						</div>
-						<div class="col-sm-4">
-							<h4>{{language[lang].contacts}}</h4>
-							<p>{{ language[lang].tel }}: {{tel}} <br />Email: <a
-									href="mailto:dariadiachkova@mail.ru">{{email}}</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="bottom">
-				<div class="logo">
-					<img src="images/logo.png" height="30" alt="logo"></div>
-					<span>&copy; 2019</span>
-				
-			</div>
-		</footer>
-	</div> <!-- end .cv (main vue app) -->
-
-	<!-- Scripts -->
-	<!-- jQuery -->
-	<script src="js/jquery-1.11.2.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Inview -->
-	<script src="js/jquery.inview.min.js"></script>
-	<!-- jQuery Knob -->
-	<script src="js/jquery.knob.min.js"></script>
-	<!-- Vue SmoothScroll -->
-	<script src="https://unpkg.com/vue/dist/vue.js"></script>
-	<script src="https://unpkg.com/vue-smooth-scroll@1.0.11"></script>
-	<!-- Isotope -->
-	<script src="js/isotope.pkgd.min.js"></script>
-	<!-- Images Loaded -->
-	<script src="js/imagesloaded.pkgd.min.js"></script>
-	<!-- Scripts.js -->
-	<script src="js/scripts.js"></script>
-	<!-- Vue components .js -->
-	<script src="js/homeComp.js"></script>
-	<script src="js/aboutComp.js"></script>
-	<script src="js/skillsComp.js"></script>
-	<script src="js/contactsComp.js"></script>
-	<script src="js/educationComp.js"></script>
-	<script src="js/portfolioComp.js"></script>
-	<script src="js/vue-app.js"></script>
-
-
-</body>
-
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Inview -->
+    <script src="js/jquery.inview.min.js"></script>
+    <!-- jQuery Knob -->
+    <script src="js/jquery.knob.min.js"></script>
+    <!-- Vue SmoothScroll -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-smooth-scroll@1.0.11"></script>
+    <!-- Isotope -->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!-- Images Preload -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <!-- Scripts.js -->
+    <script src="js/scripts.js"></script>
+    <!-- Vue components .js -->
+    <script src="js/homeComp.js"></script>
+    <script src="js/aboutComp.js"></script>
+    <script src="js/skillsComp.js"></script>
+    <script src="js/contactsComp.js"></script>
+    <script src="js/educationComp.js"></script>
+    <script src="js/portfolioComp.js"></script>
+    <script src="js/vue-app.js"></script>
+  </body>
 </html>
