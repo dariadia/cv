@@ -118,11 +118,11 @@ let cv = new Vue({
             link: "./portfolio/coffeeshop/index.html"
           },
           {
-            name: "Игра змейка",
-            desc: " js",
+            name: "Игра Шарики",
+            desc: "js, jQuery",
             src: "images/portfolio04.png",
             height: "300",
-            link: "./portfolio/snake_game/index.html"
+            link: "./portfolio/dots_game/index.html"
           },
           {
             name: "Лендинг",
