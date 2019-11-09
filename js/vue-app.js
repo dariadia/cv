@@ -256,8 +256,8 @@ let cv = new Vue({
             link: "./portfolio/coffeeshop/index.html"
           },
           {
-            name: "The snake game",
-            desc: " js",
+            name: "The dots game",
+            desc: "js, jQuery",
             src: "images/portfolio04.png",
             height: "300",
             link: "./portfolio/snake_game/index.html"
