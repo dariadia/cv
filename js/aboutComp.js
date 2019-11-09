@@ -10,7 +10,7 @@ Vue.component("about", {
          <div class="col-sm-7">
             <h3 class="small-margin-bottom"> {{language[lang].name}}</h3>
             <h5>{{language[lang].developerExt}}</h5>
-            <p>{{language[lang].reasons}}</p>
+            <p class="about_reasons">{{language[lang].reasons}}</p>
             <p>{{ language[lang].scholarship}}</p>
             <div><i v-for="decor in 5" class="fab fa-pagelines"></i></div>
             <ul class="list-unstyled text-uppercase">

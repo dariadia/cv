@@ -11,7 +11,7 @@ Vue.component("home", {
 				<h4 class="button solid-button royal-blue" >{{ language[lang].welcome }}</h4>
 			</div>
 			<div class="col-sm-5 vertical-center">
-				<img src="images/me01.png" alt="daria's photo" class="img-responsive section-img">
+				<img src="images/me01.png" alt="daria's photo main" class="img-responsive section-img">
 			</div><br><br><br>
 		</div> 
 	</div> 

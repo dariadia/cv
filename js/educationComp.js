@@ -9,7 +9,7 @@ Vue.component("education", {
         {
           name: "I craft from epoxy resin",
           icon: "fas fa-globe",
-          class: "col-sm-offset-1"
+          class: ""
         }
       ],
       hobbyBoxRu: [
@@ -19,7 +19,7 @@ Vue.component("education", {
         {
           name: "мастерю из эпоксидной смолы",
           icon: "fas fa-globe",
-          class: "col-sm-offset-1"
+          class: ""
         }
       ]
     };
@@ -49,7 +49,7 @@ Vue.component("education", {
       </div>  
 
       <h2>{{language[lang].hobbies}}</h2>
-      <div class="row">
+      <div class="row row-education">
          <div 
             v-if="lang === 0" 
             v-for="item in hobbyBoxRu" 

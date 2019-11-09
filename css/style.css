@@ -1517,3 +1517,49 @@ h3.small-margin-bottom {
 .portfolio-item {
     padding: 20px;
 }
+
+/* ==========================================================================
+   Adaptive layout
+   ========================================================================== */
+
+/* iPads */
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+    img[alt="daria's photo main"] {
+        display: none;
+    }
+
+    .section-nav {
+        position: fixed;
+        bottom: 130px;
+        right: 60px;
+        z-index: 9;
+    }
+
+    .about_reasons {
+        width: 530px;
+    }
+
+    .spacer-left {
+        margin-left: 1px;
+    }
+
+    .row-education {
+        width: 1300px;
+    }
+
+    .container-portfolio {
+        width: 1300px;
+    }
+
+    .portfolio-item {
+        padding: 10px;
+    }
+
+    .box-portfolio {
+        flex-direction: column;
+    }
+
+    .responsive-menu-open {
+        display: none;
+    }
+}

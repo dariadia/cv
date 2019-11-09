@@ -1,11 +1,11 @@
 Vue.component("portfolio", {
   props: ["language", "lang"],
   template: `<section id="portfolio">
-   <div class="container">
+   <div class="container container-portfolio">
       <h2>{{ language[lang].portfolio }}</h2>
       <div class="row">
          <div class="col-sm-12">
-            <div class="box">
+            <div class="box box-portfolio">
                <div v-for="(item, index) in language[lang].portfolioItems" v-if="index < 2" :key="item.src" class="portfolio-item">
                   <a 
                   :href="item.link" 
@@ -19,7 +19,7 @@ Vue.component("portfolio", {
                   </div>
                </div>
             </div>
-            <div class="box">
+            <div class="box box-portfolio">
                <div 
                   v-for="(item, index) in language[lang].portfolioItems" 
                   v-if="index >= 2" 
