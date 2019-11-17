@@ -336,6 +336,10 @@ h3.small-margin-bottom {
     color: #4169e1 !important;
 }
 
+.outline {
+    text-decoration: underline overline;
+}
+
 .list-skill:hover .royal-blue-hov {
     color: #4169e1;
     transition: 0.3s color;

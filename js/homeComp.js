@@ -8,7 +8,10 @@ Vue.component("home", {
 				<h1>Frontend</h1> 
 				<h1>{{ language[lang].developer }} <sup>+</sup></h1>
 				<p class="info">{{ language[lang].homeText }}</p><br>
-				<h4 class="button solid-button royal-blue" >{{ language[lang].welcome }}</h4>
+				<h2 
+					class="royal-blue-font outline" 
+				>{{ language[lang].welcome }}
+				</h2>
 			</div>
 			<div class="col-sm-5 vertical-center">
 				<img src="images/me01.png" alt="daria's photo main" class="img-responsive section-img">
