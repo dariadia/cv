@@ -132,11 +132,12 @@ let cv = new Vue({
             link: "./portfolio/parallax_website/index.html"
           },
           {
-            name: "Веб-страничка",
-            desc: "Vue.js, Vue CLI, Webpack, Bootstrap+Vue",
+            name: "База данных",
+            desc: "MySQL",
             src: "images/portfolio06.png",
             height: "300",
-            link: "https://github.com/dariadia/sample-vue-cli-project.git"
+            link:
+              "https://github.com/dariadia/Databases/tree/master/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82"
           }
         ]
       },
@@ -270,11 +271,12 @@ let cv = new Vue({
             link: "./portfolio/parallax_website/index.html"
           },
           {
-            name: "Web-page",
-            desc: "Vue.js, Vue CLI, Webpack, Bootstrap+Vue",
+            name: "Database",
+            desc: "MySQL",
             src: "images/portfolio06.png",
             height: "300",
-            link: "https://github.com/dariadia/sample-vue-cli-project.git"
+            link:
+              "https://github.com/dariadia/Databases/tree/master/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82"
           }
         ]
       }
