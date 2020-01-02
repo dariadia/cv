@@ -24,7 +24,7 @@ let cv = new Vue({
         addressLine: "г. Москва, ул. Вертолётчиков, д. 1, кв. 70. 111674",
         welcome: "Добро пожаловать в моё портфолио!",
         homeText:
-          "Привет! Меня зовут Дьячкова Дарья. Я студентка факультета веб-разработки онлайн-университета Geekbrains от Mail.ru Group.",
+          "Привет! Меня зовут Даша. Я – веб-разработчик и студентка онлайн-университета Geekbrains от Mail.ru Group.",
         personalInfo: [
           { point: "Дата рождения: ", info: " 6/06/1997" },
           { point: "тел: ", info: " +7 (917) 168 1854" }
@@ -35,7 +35,7 @@ let cv = new Vue({
             extra: ": HTML5, SCSS, CSS3 & медиа-запросы, адаптивная вёрстка",
             class: "bar-fin-adv"
           },
-          { name: "JS", class: "bar-fin-upp" },
+          { name: "JS", class: "bar-fin-adv" },
           {
             name: "Vue.js",
             class: "bar-fin-upp",
@@ -49,6 +49,7 @@ let cv = new Vue({
         skillsPlus: [
           "PHP",
           "MySQL",
+          "Yii2 basic & advanced",
           "git",
           "БЭМ",
           "Gulp",
@@ -57,8 +58,8 @@ let cv = new Vue({
           "Stylus"
         ],
         reasons:
-          "Бакалавр НИУ ВШЭ, факультет мировой экономики и мировой политики – уже заканчивая обучение, я поняла, что в жизни хотела бы заниматься совсем другим. Так, я заново начала свой карьерный путь, и в декабре 2018 поступила в Geekbrains. За это время я многому научилась на факультете веб-разработки, и продолжу обучение до июня 2020.",
-        scholarship: " ",
+          "Я учусь в Geekbrains уже год; составляю задания по JS и TypeScript для образовательной платформы Kodiri.com и участвую в их международных соревнованиях. По утрам читаю IT дайджесты и люблю узнавать о новых технологиях. В свободное время пишу приключенческие романы.",
+        scholarship: "",
         languages: "знание языков",
         languagesExt: [
           {
@@ -89,19 +90,30 @@ let cv = new Vue({
             title: "Стажёр",
             occupation: "отдел продаж AVON, подразделение Коммуникаций",
             time: "апрель 2018 – август 2018"
+          },
+          {
+            title:
+              'Участник проекта "Россия в западноевропейской прессе XVIII века"',
+            occupation: "НИУ ВШЭ",
+            time: "октябрь 2016 — апрель 2018"
           }
         ],
         myAccount: {
           caption: "Мой профиль на Github",
           link: "https://github.com/dariadia"
         },
+        myKodiri: {
+          caption: "Мой аккаунт на Kodiri",
+          link:
+            " https://www.kodiri.com/platform/candidates/5dd12f7c0da38f3017d5d5d1"
+        },
         portfolioItems: [
           {
             name: "Лендинг",
-            desc: "адаптив, Bootstrap, jQuery",
-            src: "images/portfolio01.png",
+            desc: "адаптив на 4 типа экранов, .scss, css анимация, БЭМ",
+            src: "images/portfolio03.png",
             height: "350",
-            link: "./portfolio/website-australia/index.html"
+            link: "./portfolio/coffeeshop/index.html"
           },
           {
             name: "Онлайн магазин",
@@ -111,11 +123,18 @@ let cv = new Vue({
             link: "https://github.com/dariadia/homework-BRAND-shop.git"
           },
           {
+            name: "Корректор сообщений по стоп словам",
+            desc: "js, jQuery",
+            src: "images/portfolio07.png",
+            height: "350",
+            link: "./portfolio/message_tracker/index.html"
+          },
+          {
             name: "Лендинг",
-            desc: "адаптив, .scss, БЭМ",
-            src: "images/portfolio03.png",
+            desc: "адаптив, Bootstrap, jQuery",
+            src: "images/portfolio01.png",
             height: "300",
-            link: "./portfolio/coffeeshop/index.html"
+            link: "./portfolio/website-australia/index.html"
           },
           {
             name: "Игра Шарики",
@@ -123,6 +142,13 @@ let cv = new Vue({
             src: "images/portfolio04.png",
             height: "300",
             link: "./portfolio/dots_game/index.html"
+          },
+          {
+            name: "TS Relax",
+            desc: "Typescript, HTML5, Gulp, Stylus",
+            src: "images/portfolio08.png",
+            height: "300",
+            link: "https://github.com/dariadia/ts_game"
           },
           {
             name: "Лендинг",
@@ -147,7 +173,7 @@ let cv = new Vue({
         language: "eng",
         name: "Daria V. Diachkova",
         developer: "Developer",
-        developerExt: "Junior Frontend  Developer",
+        developerExt: "Junior Frontend Developer",
         close: "close",
         contact: "Contact Me",
         about: "About Me",
@@ -163,7 +189,7 @@ let cv = new Vue({
         addressLine: "1, Vertoletchikov Street, ap. 70. Moscow, Russia. 111674",
         welcome: "Have a look around!",
         homeText:
-          "Hi, my name is Daria Diachkova, a Geekbrains student. I aspire to realise my passion for writing clean code as a front-end developer. This page is my web-portfolio.",
+          "Hi, my name is Dasha, a Geekbrains student and frontend developer. Welcome to my web-portfolio.",
         personalInfo: [
           { point: "Date of Birth: ", info: " 6/06/1997" },
           { point: "tel: ", info: " +7 (917) 168 1854" }
@@ -188,6 +214,7 @@ let cv = new Vue({
         skillsPlus: [
           "PHP",
           "MySQL",
+          "Yii2 basic & advanced",
           "git",
           "BEM",
           "Gulp",
@@ -196,7 +223,7 @@ let cv = new Vue({
           "Stylus"
         ],
         reasons:
-          "I was a senior at the HSE [International Affairs major, Economics minor] when I realised my passion for programming and web development in particular. Thus, I chose to restart my career path. I enrolled in Geekbrains from Mail.ru Group in December, 2018, and will graduate by June, 2020.",
+          "I am a Geekbrains student, and I write training exercises for the educational project Kodiri.com. I also enjoy competing in their international JS coding games. In my free time I write YA novels and read IT digests.",
         languages: "Languages",
         languagesExt: [
           { name: "russian", level: "native" },
@@ -228,19 +255,30 @@ let cv = new Vue({
             title: "Intern",
             occupation: "AVON Sales Department, Communications Division",
             time: "April 2018 - August 2018"
+          },
+          {
+            title:
+              '"Russia in the 18th Century Western European Press" Project participant',
+            occupation: "HSE",
+            time: "October 2016 — April 2018"
           }
         ],
         myAccount: {
           caption: "Follow me on Github",
           link: "https://github.com/dariadia"
         },
+        myKodiri: {
+          caption: "Follow me on Kodiri",
+          link:
+            " https://www.kodiri.com/platform/candidates/5dd12f7c0da38f3017d5d5d1"
+        },
         portfolioItems: [
           {
             name: "Landing page",
-            desc: "adaptive WD, Bootstrap, jQuery",
-            src: "images/portfolio01.png",
+            desc: "adaptive, .scss, css animation, BEM",
+            src: "images/portfolio03.png",
             height: "350",
-            link: "./portfolio/website-australia/index.html"
+            link: "./portfolio/coffeeshop/index.html"
           },
           {
             name: "Online shop",
@@ -250,11 +288,18 @@ let cv = new Vue({
             link: "https://github.com/dariadia/homework-BRAND-shop.git"
           },
           {
+            name: "Stop words tracker",
+            desc: "js, jQuery",
+            src: "images/portfolio07.png",
+            height: "350",
+            link: "./portfolio/message_tracker/index.html"
+          },
+          {
             name: "Landing page",
-            desc: "adaptive, .scss",
-            src: "images/portfolio03.png",
+            desc: "adaptive WD, Bootstrap, jQuery",
+            src: "images/portfolio01.png",
             height: "300",
-            link: "./portfolio/coffeeshop/index.html"
+            link: "./portfolio/website-australia/index.html"
           },
           {
             name: "The dots game",
@@ -262,6 +307,13 @@ let cv = new Vue({
             src: "images/portfolio04.png",
             height: "300",
             link: "./portfolio/snake_game/index.html"
+          },
+          {
+            name: "TS Relax",
+            desc: "Typescript, HTML5, Gulp, Stylus",
+            src: "images/portfolio08.png",
+            height: "300",
+            link: "https://github.com/dariadia/ts_game"
           },
           {
             name: "Landing page",

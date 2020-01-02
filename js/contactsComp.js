@@ -15,6 +15,7 @@ Vue.component("contacts", {
             <div class="spacer"></div>
                <social-icons></social-icons>
             <div class="spacer"></div>
+            <div class="spacer"></div>
       </div>  
    </section>`
 });
@@ -33,8 +34,9 @@ Vue.component("social-links", {
           link: "https://geekbrains.ru/users/3413593"
         },
         {
-          name: "Linkedin",
-          link: "https://www.linkedin.com/in/daria-diachkova-157715157/"
+          name: "Kodiri",
+          link:
+            "https://www.kodiri.com/platform/candidates/5dd12f7c0da38f3017d5d5d1"
         },
         {
           name: "Вконтакте",
@@ -64,9 +66,10 @@ Vue.component("social-icons", {
           icon: "fas fa-calendar-week"
         },
         {
-          name: "Linkedin",
-          link: "https://www.linkedin.com/in/daria-diachkova-157715157/",
-          icon: "fab fa-linkedin-in"
+          name: "Kodiri",
+          link:
+            "https://www.kodiri.com/platform/candidates/5dd12f7c0da38f3017d5d5d1",
+          icon: "fab fa-kickstarter-k"
         },
         {
           name: "Вконтакте",
