@@ -109,6 +109,13 @@ let cv = new Vue({
         },
         portfolioItems: [
           {
+            name: "SPA. Гид по персонажам и мирам книги",
+            desc: "Nuxt.js, Vuetify",
+            src: "images/portfolio09.png",
+            height: "350",
+            link: "https://github.com/dariadia/book_lore"
+          },
+          {
             name: "Лендинг",
             desc: "адаптив на 4 типа экранов, .scss, css анимация, БЭМ",
             src: "images/portfolio03.png",
@@ -116,7 +123,7 @@ let cv = new Vue({
             link: "./portfolio/coffeeshop/index.html"
           },
           {
-            name: "Онлайн магазин",
+            name: "SPA. Онлайн магазин",
             desc: "js-сервер, Vue.js",
             src: "images/portfolio02.png",
             height: "350",
@@ -137,11 +144,12 @@ let cv = new Vue({
             link: "./portfolio/website-australia/index.html"
           },
           {
-            name: "Игра Шарики",
-            desc: "js, jQuery",
-            src: "images/portfolio04.png",
+            name: "База данных",
+            desc: "MySQL",
+            src: "images/portfolio06.png",
             height: "300",
-            link: "./portfolio/dots_game/index.html"
+            link:
+              "https://github.com/dariadia/Databases/tree/master/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82"
           },
           {
             name: "TS Relax",
@@ -151,19 +159,18 @@ let cv = new Vue({
             link: "https://github.com/dariadia/ts_game"
           },
           {
+            name: "Игра Шарики",
+            desc: "js, jQuery",
+            src: "images/portfolio04.png",
+            height: "300",
+            link: "./portfolio/dots_game/index.html"
+          },
+          {
             name: "Лендинг",
             desc: "параллакс-эффект",
             src: "images/portfolio05.png",
             height: "300",
             link: "./portfolio/parallax_website/index.html"
-          },
-          {
-            name: "База данных",
-            desc: "MySQL",
-            src: "images/portfolio06.png",
-            height: "300",
-            link:
-              "https://github.com/dariadia/Databases/tree/master/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82"
           }
         ]
       },
@@ -274,6 +281,13 @@ let cv = new Vue({
         },
         portfolioItems: [
           {
+            name: "SPA. Book Guide",
+            desc: "Nuxt.js, Vuetify",
+            src: "images/portfolio09.png",
+            height: "350",
+            link: "https://github.com/dariadia/book_lore"
+          },
+          {
             name: "Landing page",
             desc: "adaptive, .scss, css animation, BEM",
             src: "images/portfolio03.png",
@@ -281,7 +295,7 @@ let cv = new Vue({
             link: "./portfolio/coffeeshop/index.html"
           },
           {
-            name: "Online shop",
+            name: "SPA. Online shop",
             desc: "js-server, Vue.js",
             src: "images/portfolio02.png",
             height: "350",
@@ -302,11 +316,12 @@ let cv = new Vue({
             link: "./portfolio/website-australia/index.html"
           },
           {
-            name: "The dots game",
-            desc: "js, jQuery",
-            src: "images/portfolio04.png",
+            name: "Database",
+            desc: "MySQL",
+            src: "images/portfolio06.png",
             height: "300",
-            link: "./portfolio/snake_game/index.html"
+            link:
+              "https://github.com/dariadia/Databases/tree/master/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82"
           },
           {
             name: "TS Relax",
@@ -316,19 +331,18 @@ let cv = new Vue({
             link: "https://github.com/dariadia/ts_game"
           },
           {
+            name: "The dots game",
+            desc: "js, jQuery",
+            src: "images/portfolio04.png",
+            height: "300",
+            link: "./portfolio/snake_game/index.html"
+          },
+          {
             name: "Landing page",
             desc: "parallax",
             src: "images/portfolio05.png",
             height: "300",
             link: "./portfolio/parallax_website/index.html"
-          },
-          {
-            name: "Database",
-            desc: "MySQL",
-            src: "images/portfolio06.png",
-            height: "300",
-            link:
-              "https://github.com/dariadia/Databases/tree/master/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82"
           }
         ]
       }

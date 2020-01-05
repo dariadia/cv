@@ -43,7 +43,28 @@ Vue.component("portfolio", {
             <div class="box box-portfolio">
                <div 
                   v-for="(item, index) in language[lang].portfolioItems" 
-                  v-if="index >= 4" 
+                  v-if="index >= 4 && index < 6" 
+                  :key="item.src" 
+                  class="portfolio-item">
+                     <a 
+                        :href="item.link" 
+                        target="_blank"><img 
+                        :height ="item.height" 
+                        :src="item.src" 
+                        alt="webpage screenshot" 
+                        class="spacer-sm">
+                     </a>
+                     <p class="iron bold-list royal-blue-hov spacer-sm"> {{ item.name }} </p>
+                     <div>
+                        <i class="fas fa-map-pin royal-blue-font padder-right-sm"></i> 
+                        {{ item.desc }}
+                     </div>
+               </div>
+            </div>
+            <div class="box box-portfolio">
+               <div 
+                  v-for="(item, index) in language[lang].portfolioItems" 
+                  v-if="index >= 6" 
                   :key="item.src" 
                   class="portfolio-item">
                      <a 
